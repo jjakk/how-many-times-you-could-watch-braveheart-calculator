@@ -1,16 +1,26 @@
+const formValidation = () => {
+    const elements = [
+        document.getElementById("years"),
+        document.getElementById("months"),
+        document.getElementById("days"),
+        document.getElementById("hours")
+    ];
+    
+    elements.forEach(e => {
+        if(e.value === ""){
+            e.value = 0;
+        }
+        else if(e.value > e.max){
+            e.value = e.max
+        }
+        else if(e.value < e.min){
+            e.value = e.min
+        }
+    });
+};
+
 const calculateBravehearts = () => {
-    if(document.getElementById("years").value === ""){
-        document.getElementById("years").value = 0;
-    }
-    if(document.getElementById("months").value === ""){
-        document.getElementById("months").value = 0;
-    }
-    if(document.getElementById("days").value === ""){
-        document.getElementById("days").value = 0;
-    }
-    if(document.getElementById("hours").value === ""){
-        document.getElementById("hours").value = 0;
-    }
+    formValidation();
 
     const data = {
         years: parseInt(document.getElementById("years").value),
