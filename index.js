@@ -7,15 +7,9 @@ const formValidation = () => {
     ];
     
     elements.forEach(e => {
-        if(e.value === ""){
-            e.value = 0;
-        }
-        else if(e.value > e.max){
-            e.value = e.max
-        }
-        else if(e.value < e.min){
-            e.value = e.min
-        }
+        if(e.value === "") e.value = 0;
+        else if(e.value > e.max) e.value = e.max
+        else if(e.value < e.min) e.value = e.min;
     });
 };
 
