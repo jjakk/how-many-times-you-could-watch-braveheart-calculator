@@ -34,5 +34,6 @@ const calculateBravehearts = () => {
 
     if(times === 1) document.getElementById("s").innerText = "";
     else document.getElementById("s").innerText = "s";
+    
     document.getElementById("output").innerText = times.toLocaleString();;
 };
