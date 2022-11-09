@@ -30,8 +30,6 @@ const calculateBravehearts = () => {
 
     const times = isNaN(totalHours) ? 0 : Math.floor(totalHours/(2 + (58/60)));
 
-    if(times === 1) document.getElementById("s").innerText = "";
-    else document.getElementById("s").innerText = "s";
-    
+    document.getElementById("s").innerText = times === 1 ? "" : "s";
     document.getElementById("output").innerText = times.toLocaleString();;
 };
