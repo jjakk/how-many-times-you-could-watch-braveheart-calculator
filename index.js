@@ -1,3 +1,5 @@
+const BRAVEHEART_LENGTH = 2 + (58/60);
+
 const formValidation = () => {
     const elements = [
         document.getElementById("years"),
@@ -28,7 +30,7 @@ const calculateBravehearts = () => {
         (data.years * 24 * 365)
     );
 
-    const times = isNaN(totalHours) ? 0 : Math.floor(totalHours/(2 + (58/60)));
+    const times = isNaN(totalHours) ? 0 : Math.floor(totalHours/BRAVEHEART_LENGTH);
 
     document.getElementById("s").innerText = times === 1 ? "" : "s";
     document.getElementById("output").innerText = times.toLocaleString();;
